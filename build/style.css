@@ -1,0 +1,285 @@
+/* Palette : marine #0B2545 · sarcelle #0F7C8C · encre #1F2B3A · gris #6B7A8C */
+
+@page {
+  size: A4;
+  margin: 26mm 20mm 22mm 20mm;
+  /* Filet d'en-tête continu, dessiné sur le fond de page. */
+  background-color: #FFFFFF;
+  background-image: url("rule.svg");
+  background-repeat: no-repeat;
+  background-position: 0 -1.6mm;  /* relatif à la zone de contenu */
+  @top-left {
+    content: "Sécuriser votre ordinateur personnel";
+    font: 600 7pt "Avenir Next"; letter-spacing: .12em; text-transform: uppercase;
+    color: #0F7C8C; vertical-align: bottom; padding-bottom: 3mm;
+  }
+  @top-right {
+    content: string(chapter, start);
+    font: 500 7.5pt "Avenir Next"; color: #6B7A8C; text-align: right;
+    vertical-align: bottom; padding-bottom: 3mm;
+  }
+  @bottom-left {
+    content: "Matéo CASANOVA";
+    font: 600 7.5pt "Avenir Next"; color: #0B2545;
+    vertical-align: top; padding-top: 3mm;
+  }
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    font: 500 7.5pt "Avenir Next"; color: #6B7A8C; text-align: right;
+    vertical-align: top; padding-top: 3mm;
+  }
+}
+@page cover {
+  margin: 0;
+  background: linear-gradient(165deg, #12355B 0%, #0B2545 55%, #071A30 100%);
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+@page toc {
+  @top-right { content: "Sommaire"; }
+}
+
+html {
+  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: 9.6pt; line-height: 1.55; color: #1F2B3A;
+}
+body { margin: 0; }
+p { margin: 0 0 2.6mm; orphans: 3; widows: 3; }
+strong { font-weight: 600; color: #0B2545; }
+em { font-style: italic; }
+
+/* ---------- Couverture ---------- */
+.cover {
+  page: cover; position: relative; height: 296mm; color: #FFFFFF;
+  break-after: page; overflow: hidden;
+}
+.cover .dots, .back .dots { position: absolute; left: 0; top: 0; width: 210mm; height: 297mm; }
+.cover .art { position: absolute; right: -34mm; top: 30mm; width: 150mm; }
+.cover .kicker {
+  position: absolute; left: 22mm; top: 26mm;
+  font-size: 7.8pt; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: #5FD0D9;
+}
+.cover-main { position: absolute; left: 22mm; top: 168mm; width: 140mm; }
+.cover h1 {
+  margin: 0; font-size: 36pt; line-height: 1.08; font-weight: 600; letter-spacing: -.01em;
+  color: #FFFFFF; bookmark-level: none;
+}
+.cover .bar { width: 26mm; height: 1.3mm; background: #2BB3BF; margin: 8mm 0 6mm; }
+.cover .subtitle { font-size: 13pt; font-weight: 400; color: #B9C9DB; margin: 0; }
+.cover-foot { position: absolute; left: 22mm; right: 22mm; bottom: 22mm; }
+.cover .topics {
+  font-size: 7.6pt; letter-spacing: .04em; color: #8FA5BE;
+  padding-bottom: 6mm; margin-bottom: 6mm; border-bottom: .5pt solid #2C4A6E;
+}
+.cover .author { font-size: 13pt; font-weight: 600; letter-spacing: .03em; }
+.cover .date { font-size: 9pt; color: #8FA5BE; margin-top: 1mm; }
+
+/* ---------- Quatrième de couverture (guide) ---------- */
+.back {
+  page: cover; position: relative; height: 296mm; color: #FFFFFF;
+  break-before: page; overflow: hidden;
+}
+.back-foot { position: absolute; left: 22mm; right: 22mm; bottom: 22mm; }
+.back .title { font-size: 16pt; font-weight: 600; line-height: 1.2; }
+.back .edition { font-size: 9pt; color: #8FA5BE; margin-top: 1.5mm; }
+.back .colophon { margin-top: 6mm; padding-top: 6mm; border-top-color: #2C4A6E; color: #B9C9DB; }
+.back .colophon a { color: #5FD0D9; }
+
+/* ---------- Sommaire ---------- */
+.toc { page: toc; break-after: page; }
+.toc-title {
+  font-size: 26pt; font-weight: 600; color: #0B2545; line-height: 1;
+  padding-bottom: 5mm; border-bottom: 1.2pt solid #0B2545;
+  bookmark-level: 1; bookmark-label: "Sommaire";
+}
+.toc-list { list-style: none; margin: 4mm 0 0; padding: 0; }
+.toc-list > li::before { content: none; }
+.toc-list a { color: inherit; text-decoration: none; }
+.toc-list a::after { content: leader(dotted) target-counter(attr(href), page); color: #6B7A8C; font-weight: 500; }
+.toc-list .l2 { margin-top: 4.2mm; font-size: 11pt; font-weight: 600; color: #0B2545; }
+.toc-list .l2 .n { display: inline-block; width: 12mm; color: #0F7C8C; font-weight: 600; }
+.toc-list .l3 { margin-top: 1.1mm; padding-left: 12mm; font-size: 9.4pt; color: #334155; }
+.toc-list .l3 .n { display: inline-block; width: 9mm; color: #8A99AB; }
+
+.legend {
+  margin-top: 9mm; padding: 4mm 5mm 2mm; background: #F4F7FA; break-inside: avoid; border-radius: 1.5mm;
+  font-size: 8.4pt; color: #4A5868;
+}
+.legend-title {
+  font-size: 7.2pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: #0B2545; margin-bottom: 2.5mm;
+}
+.legend p { margin: 0 0 2mm; }
+.chip {
+  display: inline-block; font-size: 7.6pt; font-weight: 700; letter-spacing: .02em;
+  padding: .5mm 2mm; margin-right: 1.5mm; border-radius: .8mm; border-left: 2pt solid;
+  background: #FFFFFF;
+}
+
+/* ---------- Chapitres ---------- */
+.chapter { break-before: page; string-set: chapter attr(data-title); }
+.chapter.flow { break-before: auto; margin-top: 11mm; }
+.chapter.keep { break-inside: avoid; }
+h2 {
+  margin: 0 0 7mm; padding-bottom: 4.5mm; border-bottom: 1.2pt solid #0B2545;
+  break-after: avoid; bookmark-level: 1;
+}
+h2 .num {
+  display: block; font-size: 30pt; font-weight: 200; line-height: 1; color: #0F7C8C; margin-bottom: 2.5mm;
+}
+h2 .t {
+  display: block; font-size: 21pt; font-weight: 600; line-height: 1.15; color: #0B2545;
+}
+h3 {
+  margin: 9mm 0 3mm; font-size: 13.5pt; font-weight: 600; line-height: 1.25; color: #0B2545;
+  break-after: avoid; bookmark-level: 2;
+}
+h3 .num { color: #0F7C8C; margin-right: 3mm; }
+h4 {
+  margin: 6mm 0 2mm; font-size: 10.6pt; font-weight: 600; color: #0B2545;
+  break-after: avoid; bookmark-level: none;
+}
+p.lead { font-size: 11.5pt; line-height: 1.6; color: #334155; }
+
+/* ---------- Listes ---------- */
+ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+li { margin: 0 0 1.3mm; }
+ul { list-style: none; }
+ul > li { position: relative; }
+ul > li::before {
+  content: ""; position: absolute; left: -4.2mm; top: .62em;
+  width: 1.5mm; height: 1.5mm; border-radius: .3mm; background: #0F7C8C;
+}
+li ul { margin: 1.3mm 0 0; }
+li ul > li::before { background: none; border: .8pt solid #0F7C8C; width: 1.1mm; height: 1.1mm; border-radius: 50%; }
+
+ol.steps { list-style: none; padding-left: 0; counter-reset: step; }
+ol.steps > li { counter-increment: step; position: relative; padding-left: 10mm; margin-bottom: 2.6mm; }
+ol.steps > li::before {
+  content: counter(step); position: absolute; left: 0; top: -.2mm;
+  width: 6mm; height: 6mm; line-height: 6mm; border-radius: 50%;
+  background: #0B2545; color: #FFFFFF; font-size: 8pt; font-weight: 700; text-align: center;
+}
+ol.steps li ul { margin-top: 2mm; }
+ol.steps.short { break-inside: avoid; }
+
+/* ---------- Encadrés système ---------- */
+.card {
+  margin: 3.5mm 0 4mm; padding: 3.2mm 5mm 1.4mm 5mm;
+  border: .6pt solid #DCE3EB; border-left: 3pt solid #0F7C8C; border-radius: 1.5mm;
+  background: #FBFCFD; break-inside: avoid;
+}
+.card .card-title {
+  margin: 0 0 2mm; font-size: 9pt; font-weight: 700; line-height: 1.3; letter-spacing: .01em;
+}
+.card h3.card-title { font-size: 10pt; }
+.card h3.card-title .num { margin-right: 2mm; opacity: .7; }
+.card ul { margin-bottom: 1.6mm; }
+.card.win, .chip.win { border-left-color: #0067B8; }
+.card.win .card-title, .chip.win { color: #0067B8; }
+.card.mac, .chip.mac { border-left-color: #4B5563; }
+.card.mac .card-title, .chip.mac { color: #4B5563; }
+.card.linux, .chip.linux { border-left-color: #C26A00; }
+.card.linux .card-title, .chip.linux { color: #B45F00; }
+.card.univ .card-title { color: #0F7C8C; }
+/* Un titre et son contenu restent sur la même page ; une courte introduction reste avec la suite. */
+.block { break-inside: avoid; }
+.block.free { break-inside: auto; }
+.block.lead-in { break-after: avoid; }
+.card li { break-inside: avoid; }
+.card.win ul > li::before { background: #0067B8; }
+.card.mac ul > li::before { background: #4B5563; }
+.card.linux ul > li::before { background: #C26A00; }
+
+/* ---------- Encadrés de texte ---------- */
+.callout {
+  margin: 4mm 0 4.5mm; padding: 3.2mm 5mm 1.2mm;
+  border-left: 3pt solid; border-radius: 0 1.5mm 1.5mm 0; break-inside: avoid;
+}
+.callout-label {
+  font-size: 7.4pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1.4mm;
+}
+.callout ol { padding-left: 5mm; }
+.callout ol > li::marker { font-weight: 700; }
+.callout.example, .chip.example { border-color: #3C6E9F; }
+.callout.example { background: #EFF4FA; }
+.callout.example .callout-label, .chip.example, .callout.example ol > li::marker { color: #3C6E9F; }
+.callout.important { background: #E9F5F6; border-color: #0F7C8C; }
+.callout.important .callout-label { color: #0F7C8C; }
+.callout.solution, .chip.solution { border-color: #2F855A; }
+.callout.solution { background: #EDF7F1; }
+.callout.solution .callout-label, .chip.solution { color: #2F855A; }
+.callout.warning, .chip.warning { border-color: #C98A12; }
+.callout.warning { background: #FDF6E6; }
+.callout.warning .callout-label, .chip.warning { color: #9A6500; }
+
+/* ---------- Éléments en ligne ---------- */
+code {
+  font-family: Menlo, monospace; font-size: 8.2pt; color: #12355B;
+  background: #EDF1F6; padding: .2mm .7mm; border-radius: .8mm;
+}
+.path { font-weight: 600; color: #0B2545; }
+.path .sep { color: #0F7C8C; margin: 0 1.1mm; }
+.keys { white-space: nowrap; }
+.keys .plus { margin: 0 .9mm; color: #6B7A8C; font-size: 8pt; }
+kbd {
+  font-family: "Avenir Next", sans-serif; font-size: 7.8pt; font-weight: 600; color: #0B2545;
+  padding: .2mm 1.6mm; border: .6pt solid #B8C4D2; border-bottom-width: 1.5pt; border-radius: 1mm;
+  background: #F6F8FA;
+}
+
+/* ---------- Tableau ---------- */
+table { width: 100%; border-collapse: collapse; margin: 1mm 0 7mm; font-size: 9.2pt; break-inside: avoid; }
+thead th {
+  background: #0B2545; color: #FFFFFF; text-align: left; padding: 2.4mm 4mm;
+  font-size: 8.4pt; font-weight: 700; letter-spacing: .02em;
+}
+tbody td { padding: 2.4mm 4mm; border-bottom: .5pt solid #DCE3EB; vertical-align: top; }
+tbody tr:nth-child(even) td { background: #F5F8FB; }
+tbody td:first-child { width: 36%; font-weight: 600; color: #0B2545; }
+table.compare { font-size: 8.4pt; }
+table.compare th, table.compare td { padding-left: 2.6mm; padding-right: 2.6mm; }
+table.compare tbody td:first-child { width: 19%; }
+table.long { break-inside: auto; font-size: 8.8pt; }
+table.long tr { break-inside: avoid; }
+table.long td { padding-top: 1.5mm; padding-bottom: 1.5mm; }
+table.long tbody td:first-child { width: 44%; }
+
+/* ---------- Liste de vérification ---------- */
+ul.checklist { padding-left: 0; margin-top: 2mm; }
+ul.checklist > li {
+  margin: 0; padding: 1.15mm 0 1.15mm 10mm; border-bottom: .5pt solid #E3E8EE; break-inside: avoid;
+}
+ul.checklist > li::before {
+  left: 0; top: 1.3mm; width: 4.2mm; height: 4.2mm; border-radius: .8mm;
+  background: #FFFFFF; border: 1pt solid #0F7C8C;
+}
+.check-date { margin-top: 6mm; font-weight: 600; color: #0B2545; }
+.check-date .line { display: inline-block; width: 55mm; border-bottom: .6pt solid #8A99AB; }
+
+.colophon {
+  margin-top: 8mm; padding-top: 3.5mm; border-top: .5pt solid #DCE3EB;
+  font-size: 7.8pt; line-height: 1.5; color: #6B7A8C; break-inside: avoid;
+}
+.colophon p { margin: 0 0 1mm; }
+.colophon a { color: #0F7C8C; }
+
+/* ---------- Fiches pratiques ---------- */
+.fiche-head {
+  margin: -26mm -20mm 7mm; padding: 14mm 20mm 7mm;
+  background: linear-gradient(165deg, #12355B 0%, #0B2545 60%, #071A30 100%); color: #FFFFFF;
+}
+.fiche-head .kicker {
+  font-size: 7.4pt; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #5FD0D9;
+}
+.fiche-head h1 {
+  margin: 3mm 0 1.5mm; font-size: 25pt; line-height: 1.1; font-weight: 600; color: #FFFFFF; bookmark-level: none;
+}
+.fiche-head .subtitle { margin: 0 0 4.5mm; font-size: 10.5pt; color: #B9C9DB; }
+.fiche-head .meta { padding-top: 3mm; border-top: .5pt solid #2C4A6E; font-size: 7.6pt; color: #8FA5BE; }
+body.fiche .chapter.flow { margin-top: 6mm; }
+body.fiche h2 { margin: 0 0 3.5mm; padding-bottom: 2mm; border-bottom: .8pt solid #0B2545; }
+body.fiche h2 .t { font-size: 14pt; }
+body.fiche .colophon { margin-top: 6mm; }

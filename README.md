@@ -34,7 +34,7 @@ Ce guide est un travail personnel, indépendant de l'ANSSI et de Cybermalveillan
 | `securiser-votre-ordinateur-personnel.md` | Texte source du guide |
 | `fiches/fiche-urgence.md` | Texte source de la fiche 3 (les fiches 1 et 2 sont extraites du guide) |
 | `build/` | Génération des PDF à partir du Markdown : voir [build/README.md](build/README.md) |
-| `index.html`, `favicon.svg`, `og-image.png` | Site publié par GitHub Pages |
+| `index.html`, `favicon.svg`, `apple-touch-icon.png`, `og-image.png` | Site publié par GitHub Pages |
 
 ## Historique des versions
 

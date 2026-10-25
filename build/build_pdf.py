@@ -10,9 +10,10 @@ import datetime
 import re
 import sys
 from pathlib import Path
+from typing import NamedTuple
 
 import markdown
-from bs4 import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup, NavigableString, Tag
 from weasyprint import HTML
 
 BUILD_DIR = Path(__file__).resolve().parent
@@ -57,10 +58,21 @@ CARD_END = ("h2", "h3", "h4", "blockquote")
 # Fiche : pas d'en-tête courant sur la première page, qui porte le bandeau-titre.
 FICHE_FIRST_PAGE = ("@page :first { background-image: none; @top-left { content: none; } "
                     "@top-right { content: none; } }")
+# Options de WeasyPrint : PDF accessible (balisé).
+PDF_OPTIONS = {"pdf_variant": "pdf/ua-1"}
 
 
 class SourceError(ValueError):
     """Le Markdown ne respecte pas une convention dont dépend la mise en page."""
+
+
+class Document(NamedTuple):
+    """Le document mis en forme, commun au PDF et au site."""
+    soup: BeautifulSoup
+    title: str
+    toc: list  # (niveau, numéro, texte, ancre) de chaque chapitre et de chaque partie
+    content: Tag  # <main>, qui contient un <section> par chapitre
+    chapters: list
 
 
 def clean(text):
@@ -103,10 +115,15 @@ def callout_kind(label):
     return next((v for k, v in CALLOUT_KIND.items() if label.startswith(k)), "example")
 
 
+def class_names(el):
+    """Classes de l'élément `el`, sous forme de liste."""
+    cls = el.get("class") or []
+    return cls.split() if isinstance(cls, str) else cls
+
+
 def is_card(el):
     """Vrai pour un encadré propre à un système (div.card)."""
-    cls = el.get("class") or ""
-    return (cls.split() if isinstance(cls, str) else cls)[:1] == ["card"]
+    return class_names(el)[:1] == ["card"]
 
 
 def parse(md_text):
@@ -186,7 +203,7 @@ def mark_chapters(chapters, fiche):
     chapitre suit directement le bandeau-titre."""
     for ch in chapters if fiche else chapters[1:]:
         annex = ch["data-title"].startswith("Annexe")
-        keep = ch.find(string=re.compile(r"^\[ \] ")) is not None
+        keep = ch.find("ul", class_="checklist") is not None
         ch["class"] = "chapter" if annex else "chapter flow keep" if keep else "chapter flow"
     if not fiche and chapters:
         for p in chapters[0].find_all("p", recursive=False):
@@ -457,24 +474,31 @@ def fiche_page_style(title):
 </style>"""
 
 
-def render_html(md_text, fiche=False, subtitle=None):
-    """Page HTML complète du document, prête pour WeasyPrint."""
-    subtitle = subtitle or GUIDE_SUBTITLE
+def structure(md_text, fiche=False):
+    """Arbre HTML du Markdown, avec la mise en forme commune au PDF et au site : titres numérotés,
+    chapitres, encadrés, chemins de menus, touches, listes et typographie."""
     soup = parse(md_text)
     title = take_title(soup)
     for hr in soup.find_all("hr"):
         hr.decompose()
     toc = number_headings(soup, fiche)
     content, chapters = split_chapters(soup, title)
-    mark_chapters(chapters, fiche)
     mark_tables(content)
     wrap_cards(soup, content)
     split_callouts(soup, content)
     style_callouts(soup, content)
     style_menus_and_keys(soup, content)
     style_lists(soup, content)
-    group_blocks(soup, chapters)
     apply_typo(content)
+    return Document(soup, title, toc, content, chapters)
+
+
+def render_html(md_text, fiche=False, subtitle=None):
+    """Page HTML complète du document, prête pour WeasyPrint."""
+    subtitle = subtitle or GUIDE_SUBTITLE
+    soup, title, toc, content, chapters = structure(md_text, fiche)
+    mark_chapters(chapters, fiche)
+    group_blocks(soup, chapters)
     box = colophon(soup, title, fiche)
     if fiche:
         (chapters[-1] if chapters else content).append(box)
@@ -498,14 +522,23 @@ def render_html(md_text, fiche=False, subtitle=None):
 </body></html>"""
 
 
+def paginate(page):
+    """Mise en pages de la page HTML `page` par WeasyPrint, prête à être écrite en PDF."""
+    # style.css et rule.svg sont résolus depuis le dossier build/.
+    return HTML(string=page, base_url=(BUILD_DIR / "style.css").as_uri()).render(**PDF_OPTIONS)
+
+
+def page_count(md_text):
+    """Nombre de pages du PDF du guide `md_text`, annoncé sur le site."""
+    return len(paginate(render_html(md_text)).pages)
+
+
 def build(md_text, out, *, fiche=False, subtitle=None, html_out=None):
     """Génère le PDF `out` et, si demandé, le HTML intermédiaire `html_out`."""
     page = render_html(md_text, fiche, subtitle)
     if html_out:
         html_out.write_text(page, encoding="utf-8")
-    # style.css et rule.svg sont résolus depuis le dossier build/.
-    document = HTML(string=page, base_url=(BUILD_DIR / "style.css").as_uri())
-    document.write_pdf(out, pdf_variant="pdf/ua-1")
+    paginate(page).write_pdf(out, **PDF_OPTIONS)
     print(f"{out} ({out.stat().st_size // 1024} Ko)")
 
 

@@ -91,7 +91,7 @@ En résumé, ce sont les mots de passe entièrement aléatoires qui offrent la m
 
 #### 🔄 Pourquoi votre mot de passe doit être unique pour chaque compte
 
-Si vous utilisez le même mot de passe sur plusieurs comptes et qu’un site est piraté, les attaquants récupèrent ce mot de passe et l’essaient sur vos autres comptes : c’est ce qu’on appelle le « credential stuffing » (bourrage d’identifiants).
+Si vous utilisez le même mot de passe sur plusieurs comptes et qu’un site est piraté, les attaquants récupèrent ce mot de passe et l’essaient sur vos autres comptes : c’est ce qu’on appelle le bourrage d’identifiants (« credential stuffing »).
 
 > **Exemple :**
 >
@@ -129,7 +129,7 @@ Pourquoi ces trois-là seulement ? Une feuille de papier ne se verrouille pas : 
 De plus en plus de services (Google, Apple, Microsoft, Amazon…) proposent de remplacer le mot de passe par une clé d’accès (*passkey*). Vous vous connectez alors avec l’empreinte, la reconnaissance faciale ou le code de déverrouillage de votre appareil, sans rien taper.
 
 - **Plus pratique :** il n’y a rien à retenir ni à saisir.
-- **Plus sûr :** la clé d’accès ne fonctionne que sur le vrai site. Un faux site d’hameçonnage ne peut pas la récupérer, même si vous vous laissez tromper : c’est aujourd’hui la meilleure protection contre le phishing.
+- **Plus sûr :** la clé d’accès ne fonctionne que sur le vrai site. Un faux site d’hameçonnage ne peut pas la récupérer, même si vous vous laissez tromper : c’est aujourd’hui la meilleure protection contre l’hameçonnage.
 - Quand un service vous le propose, acceptez de créer une clé d’accès. Elle est enregistrée dans votre gestionnaire de mots de passe (Bitwarden les gère gratuitement) ou dans celui de votre appareil (Apple, Google, Windows).
 - Gardez une autre méthode de connexion (mot de passe avec 2FA, codes de secours) tant que vous n’êtes pas sûr de retrouver vos clés d’accès sur un nouvel appareil.
 

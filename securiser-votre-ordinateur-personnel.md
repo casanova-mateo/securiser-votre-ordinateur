@@ -411,7 +411,7 @@ Même un système parfaitement configuré peut être fragilisé par de mauvaises
 
 - Verrouillez l’écran avec **Windows + L**
 - Pour éteindre, choisissez **Démarrer > Marche/Arrêt > Arrêter** plutôt que la mise en veille
-- Pour reprendre votre travail sans tout rouvrir, la veille prolongée protège autant que l’arrêt. Activez-la dans **Panneau de configuration > Options d’alimentation > Choisir l’action des boutons d’alimentation**, : cliquez sur « Modifier des paramètres actuellement non disponibles », cochez « Veille prolongée », puis choisissez « Mettre en veille prolongée » dans le menu Marche/Arrêt.
+- Pour reprendre votre travail sans tout rouvrir, la veille prolongée protège autant que l’arrêt. Activez-la dans **Panneau de configuration > Options d’alimentation > Choisir l’action des boutons d’alimentation** : cliquez sur « Modifier des paramètres actuellement non disponibles », cochez « Veille prolongée », puis choisissez « Mettre en veille prolongée » dans le menu Marche/Arrêt.
 - Affichez les extensions de fichiers : dans l’Explorateur de fichiers, **Afficher > Afficher > Extensions de noms de fichiers**
 - Laissez Microsoft Defender activé et n’installez pas un second antivirus : deux antivirus actifs en même temps peuvent entrer en conflit et ralentir l’ordinateur
 

@@ -1,0 +1,97 @@
+<!doctype html>
+<!-- Généré par build/build_site.py à partir de securiser-votre-ordinateur-personnel.md : ne modifiez pas ce fichier. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-WZRJfWvsnNCPcxzZwvyhovnZGqhZaC+8gPGPRbx6wTk='; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<script>document.documentElement.classList.add("js");</script>
+<title>Activez le chiffrement complet du disque — Sécuriser votre ordinateur personnel</title>
+<meta name="description" content="Le chiffrement complet du disque protège vos données « au repos », c’est-à-dire lorsque votre ordinateur est éteint. Si votre ordinateur portable est perdu ou…">
+<meta name="author" content="Matéo CASANOVA">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://casanova-mateo.github.io/securiser-votre-ordinateur/guide/chiffrement/">
+<meta property="og:url" content="https://casanova-mateo.github.io/securiser-votre-ordinateur/guide/chiffrement/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../site.css?v=1794764d5a">
+<script src="../../site.js?v=083db35dbe" defer></script>
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Sécuriser votre ordinateur personnel">
+<meta property="og:title" content="Activez le chiffrement complet du disque — Sécuriser votre ordinateur personnel">
+<meta property="og:description" content="Le chiffrement complet du disque protège vos données « au repos », c’est-à-dire lorsque votre ordinateur est éteint. Si votre ordinateur portable est perdu ou…">
+<meta property="og:image" content="https://casanova-mateo.github.io/securiser-votre-ordinateur/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sécuriser votre ordinateur personnel, guide pratique par Matéo CASANOVA">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="topbar">
+  <div class="wrap wide">
+    <a class="brand" href="../../"><img src="../../favicon.svg" alt="" width="28" height="28">Sécuriser votre ordinateur personnel</a>
+    <nav class="topnav" aria-label="Accès rapide">
+      <a href="../../guide/">Sommaire</a>
+      <a class="urgent" href="../../guide/en-cas-de-probleme/">En cas de problème</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap wide layout with-nav">
+<main id="contenu">
+<article class="prose"><p class="kicker">Les bases</p><h1 id="s2-4"><span class="num">2.4</span> <span class="t">Activez le chiffrement complet du disque</span></h1><p class="lead">Le chiffrement complet du disque prot&egrave;ge vos donn&eacute;es &laquo;&nbsp;au repos&nbsp;&raquo;, c&rsquo;est-&agrave;-dire lorsque votre ordinateur est &eacute;teint. Si votre ordinateur portable est perdu ou vol&eacute;, le chiffrement garantit que, sans votre mot de passe, vos fichiers ne sont qu&rsquo;une suite de donn&eacute;es incompr&eacute;hensibles pour quiconque tenterait de les lire.</p><fieldset class="os-filter"><legend>Afficher les instructions pour</legend><div class="os-options"><label><input checked name="systeme" type="radio" value="all"><span>Tous les syst&egrave;mes</span></label><label><input name="systeme" type="radio" value="win"><span>Windows</span></label><label><input name="systeme" type="radio" value="mac"><span>macOS</span></label><label><input name="systeme" type="radio" value="linux"><span>Linux</span></label></div></fieldset><ul>
+<li><strong>Sans chiffrement&nbsp;:</strong> un voleur peut retirer votre disque, le brancher sur un autre ordinateur et lire vos fichiers en quelques minutes.</li>
+<li><strong>Avec chiffrement&nbsp;:</strong> il n&rsquo;obtient que des donn&eacute;es brouill&eacute;es et illisibles, sauf en cas de faille non corrig&eacute;e dans le syst&egrave;me de chiffrement ou de mot de passe trop faible.</li>
+</ul><blockquote class="callout warning"><div class="callout-label">Attention</div>
+<p>Le chiffrement s&rsquo;accompagne d&rsquo;une cl&eacute; de r&eacute;cup&eacute;ration. Si vous la perdez et oubliez votre mot de passe, vos donn&eacute;es sont d&eacute;finitivement perdues. Ajoutez-la &agrave; votre kit de secours (voir &laquo;&nbsp;Le kit de secours&nbsp;&raquo;, en <a href="../../guide/mots-de-passe/">2.3</a>), jamais dans un fichier sur le m&ecirc;me ordinateur.</p>
+</blockquote><div class="card win" data-os="win"><h2 class="card-title">Windows</h2><div class="card-body" id="encadre-1"><ul>
+<li>&Eacute;dition Famille&nbsp;: activez le chiffrement de l&rsquo;appareil dans <strong class="path">Param&egrave;tres<span class="sep">&rsaquo;</span><wbr>Confidentialit&eacute; et s&eacute;curit&eacute;<span class="sep">&rsaquo;</span><wbr>Chiffrement de l&rsquo;appareil</strong>. Il est souvent d&eacute;j&agrave; actif sur les PC r&eacute;cents, mais il n&eacute;cessite un PC compatible et une connexion avec un compte Microsoft.</li>
+<li>&Eacute;ditions Pro, Entreprise et &Eacute;ducation&nbsp;: activez BitLocker dans <strong class="path">Panneau de configuration<span class="sep">&rsaquo;</span><wbr>Syst&egrave;me et s&eacute;curit&eacute;<span class="sep">&rsaquo;</span><wbr>Chiffrement de lecteur BitLocker</strong></li>
+<li>Avec un compte Microsoft, votre cl&eacute; de r&eacute;cup&eacute;ration y est enregistr&eacute;e automatiquement (account.microsoft.com/devices/recoverykey). Avec un compte local, Windows vous propose de l&rsquo;imprimer ou de l&rsquo;enregistrer dans un fichier. Dans tous les cas, ajoutez-la &agrave; votre kit de secours.</li>
+<li>Si l&rsquo;option n&rsquo;appara&icirc;t pas, VeraCrypt est une alternative gratuite, r&eacute;serv&eacute;e aux utilisateurs &agrave; l&rsquo;aise avec l&rsquo;informatique</li>
+<li>Par d&eacute;faut, la puce de s&eacute;curit&eacute; du PC (TPM) d&eacute;verrouille le disque automatiquement au d&eacute;marrage&nbsp;: c&rsquo;est alors votre mot de passe Windows qui prot&egrave;ge vos donn&eacute;es, et le disque reste illisible s&rsquo;il est retir&eacute; de l&rsquo;ordinateur. Option technique (&eacute;ditions Pro)&nbsp;: ajoutez un code PIN demand&eacute; avant le d&eacute;marrage de Windows. Sans ce code, un voleur qui allume le PC trouve le disque d&eacute;j&agrave; d&eacute;verrouill&eacute;, ce qui rend possibles des attaques avanc&eacute;es, comme intercepter la cl&eacute; au moment o&ugrave; la puce la transmet. Avec le code, le disque reste verrouill&eacute; tant qu&rsquo;il n&rsquo;a pas &eacute;t&eacute; saisi. Il faut d&rsquo;abord autoriser cette option dans l&rsquo;&eacute;diteur de strat&eacute;gie de groupe (&laquo;&nbsp;Exiger une authentification suppl&eacute;mentaire au d&eacute;marrage&nbsp;&raquo;).</li>
+</ul></div></div><div class="card mac" data-os="mac"><h2 class="card-title">macOS</h2><div class="card-body" id="encadre-2"><ul>
+<li>Activez FileVault dans <strong class="path">R&eacute;glages Syst&egrave;me<span class="sep">&rsaquo;</span><wbr>Confidentialit&eacute; et s&eacute;curit&eacute;<span class="sep">&rsaquo;</span><wbr>FileVault</strong> (il est souvent propos&eacute; d&egrave;s la configuration du Mac)</li>
+<li>Au moment de l&rsquo;activation, choisissez de cr&eacute;er une cl&eacute; de r&eacute;cup&eacute;ration et ajoutez-la &agrave; votre kit de secours. L&rsquo;autre option, autoriser votre compte iCloud &agrave; d&eacute;verrouiller le disque, est plus simple, mais la protection de votre Mac d&eacute;pend alors aussi de la s&eacute;curit&eacute; de votre compte Apple.</li>
+</ul></div></div><div class="card linux" data-os="linux"><h2 class="card-title">Linux</h2><div class="card-body" id="encadre-3"><ul>
+<li>Le chiffrement (LUKS) s&rsquo;active au moment de l&rsquo;installation, il est difficile &agrave; ajouter apr&egrave;s coup (voir <a href="../../guide/linux/">la partie Linux</a>)</li>
+</ul></div></div></article>
+<aside class="page-end" aria-label="À propos de cette page">
+  <p><a href="mailto:mateo.casanova.cyber@gmail.com?subject=Guide%20%C2%AB%20S%C3%A9curiser%20votre%20ordinateur%20personnel%20%C2%BB%2C%202.4%20Chiffrement%20du%20disque&amp;body=Page%20%3A%20https%3A//casanova-mateo.github.io/securiser-votre-ordinateur/guide/chiffrement/%0A%0ACorrection%20propos%C3%A9e%20%3A%20">Signaler une erreur sur cette page</a></p>
+  <p><a href="../../securiser-votre-ordinateur-personnel.pdf">Le guide complet en PDF (27&nbsp;pages)</a>
+    · <a href="../../#fiches">Les fiches à imprimer</a></p>
+</aside>
+<nav class="pager" aria-label="Pages précédente et suivante"><a class="prev" href="../../guide/mots-de-passe/" rel="prev"><span class="dir">Précédent</span><span class="n">2.3</span> Mots de passe et accès</a><a class="next" href="../../guide/comptes-en-ligne/" rel="next"><span class="dir">Suivant</span><span class="n">2.5</span> Comptes en ligne</a></nav>
+</main>
+<nav class="sidebar" aria-label="Sommaire du guide">
+  <p class="sidebar-title"><a href="../../guide/">Sommaire</a></p>
+  <ol class="nav">
+    <li><a href="../../guide/pourquoi-securiser/"><span class="n">01</span><span>Pourquoi sécuriser votre ordinateur ?</span></a></li>
+    <li><span class="nav-group"><span class="n">02</span><span>Les bases</span></span><ol><li><a href="../../guide/mises-a-jour/"><span class="n">2.1</span><span>Mises à jour</span></a></li><li><a href="../../guide/antivirus/"><span class="n">2.2</span><span>Antivirus</span></a></li><li><a href="../../guide/mots-de-passe/"><span class="n">2.3</span><span>Mots de passe et accès</span></a></li><li><a href="../../guide/chiffrement/" aria-current="page"><span class="n">2.4</span><span>Chiffrement du disque</span></a></li><li><a href="../../guide/comptes-en-ligne/"><span class="n">2.5</span><span>Comptes en ligne</span></a></li><li><a href="../../guide/navigation/"><span class="n">2.6</span><span>Navigation sur le web</span></a></li><li><a href="../../guide/reseau/"><span class="n">2.7</span><span>Réseau et Wi-Fi</span></a></li><li><a href="../../guide/sauvegardes/"><span class="n">2.8</span><span>Sauvegardes</span></a></li><li><a href="../../guide/smartphone/"><span class="n">2.9</span><span>Smartphone</span></a></li></ol></li>
+    <li><a href="../../guide/linux/"><span class="n">03</span><span>Linux, une alternative gratuite et sûre</span></a></li>
+    <li><a href="../../guide/bonnes-pratiques/"><span class="n">04</span><span>Bonnes pratiques au quotidien</span></a></li>
+    <li><a href="../../guide/en-cas-de-probleme/"><span class="n">05</span><span>Que faire en cas de problème ?</span></a></li>
+    <li><a href="../../guide/liste-de-verification/"><span class="n">06</span><span>Liste de vérification</span></a></li>
+    <li><a href="../../guide/annexe-anssi/"><span class="n">07</span><span>Annexe : les 42 mesures de l’ANSSI</span></a></li>
+  </ol>
+</nav>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap wide">
+    <p><strong>Matéo CASANOVA</strong> — Sécuriser votre ordinateur personnel, version 1.0 (version originale en français), octobre 2026.</p>
+    <p>Une erreur, une suggestion ? Écrivez à
+      <a href="mailto:mateo.casanova.cyber@gmail.com?subject=Guide%20%C2%AB%20S%C3%A9curiser%20votre%20ordinateur%20personnel%20%C2%BB">mateo.casanova.cyber@gmail.com</a>.</p>
+    <p class="links"><a href="https://github.com/casanova-mateo/securiser-votre-ordinateur">Sources et historique des versions</a></p>
+    <p>Ce guide est un travail personnel, indépendant de l’ANSSI et de Cybermalveillance.gouv.fr. Il est fourni à titre informatif ; les intitulés des menus peuvent varier selon la version et la langue de votre système d’exploitation.</p>
+    <p>Ce site n’utilise ni cookie ni outil de mesure d’audience : le système choisi et les cases cochées restent dans votre navigateur. Éditeur : Matéo CASANOVA, mateo.casanova.cyber@gmail.com. Hébergeur : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+  </div>
+</footer>
+
+</body>
+</html>

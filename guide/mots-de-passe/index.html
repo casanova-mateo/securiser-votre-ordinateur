@@ -1,0 +1,133 @@
+<!doctype html>
+<!-- Généré par build/build_site.py à partir de securiser-votre-ordinateur-personnel.md : ne modifiez pas ce fichier. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-WZRJfWvsnNCPcxzZwvyhovnZGqhZaC+8gPGPRbx6wTk='; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<script>document.documentElement.classList.add("js");</script>
+<title>Sécurisez vos mots de passe et vos accès — Sécuriser votre ordinateur personnel</title>
+<meta name="description" content="Bien protéger vos accès garantit que personne d’autre que vous ne peut utiliser votre ordinateur ou vos comptes en ligne. C’est votre première ligne de…">
+<meta name="author" content="Matéo CASANOVA">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0B2545">
+<link rel="canonical" href="https://casanova-mateo.github.io/securiser-votre-ordinateur/guide/mots-de-passe/">
+<meta property="og:url" content="https://casanova-mateo.github.io/securiser-votre-ordinateur/guide/mots-de-passe/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.fr">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../site.css?v=1794764d5a">
+<script src="../../site.js?v=083db35dbe" defer></script>
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Sécuriser votre ordinateur personnel">
+<meta property="og:title" content="Sécurisez vos mots de passe et vos accès — Sécuriser votre ordinateur personnel">
+<meta property="og:description" content="Bien protéger vos accès garantit que personne d’autre que vous ne peut utiliser votre ordinateur ou vos comptes en ligne. C’est votre première ligne de…">
+<meta property="og:image" content="https://casanova-mateo.github.io/securiser-votre-ordinateur/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sécuriser votre ordinateur personnel, guide pratique par Matéo CASANOVA">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="topbar">
+  <div class="wrap wide">
+    <a class="brand" href="../../"><img src="../../favicon.svg" alt="" width="28" height="28">Sécuriser votre ordinateur personnel</a>
+    <nav class="topnav" aria-label="Accès rapide">
+      <a href="../../guide/">Sommaire</a>
+      <a class="urgent" href="../../guide/en-cas-de-probleme/">En cas de problème</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap wide layout with-nav">
+<main id="contenu">
+<article class="prose"><p class="kicker">Les bases</p><h1 id="s2-3"><span class="num">2.3</span> <span class="t">S&eacute;curisez vos mots de passe et vos acc&egrave;s</span></h1><p class="lead">Bien prot&eacute;ger vos acc&egrave;s garantit que personne d&rsquo;autre que vous ne peut utiliser votre ordinateur ou vos comptes en ligne. C&rsquo;est votre premi&egrave;re ligne de d&eacute;fense contre les acc&egrave;s non autoris&eacute;s.</p><nav aria-labelledby="sur-cette-page" class="on-page"><p class="on-page-title" id="sur-cette-page">Sur cette page</p><ul class="on-page-list"><li><a href="#l-entropie-des-mots-de-passe-pourquoi-le-hasard-compte">L&rsquo;entropie des mots de passe (pourquoi le hasard compte)</a></li><li><a href="#pourquoi-votre-mot-de-passe-doit-etre-unique-pour-chaque-compte">Pourquoi votre mot de passe doit &ecirc;tre unique pour chaque compte</a></li><li><a href="#comment-gerer-vos-mots-de-passe-et-vos-comptes">Comment g&eacute;rer vos mots de passe et vos comptes</a></li><li><a href="#le-kit-de-secours">Le kit de secours</a></li><li><a href="#les-cles-d-acces-passkeys-l-avenir-des-mots-de-passe">Les cl&eacute;s d&rsquo;acc&egrave;s (passkeys)&nbsp;: l&rsquo;avenir des mots de passe</a></li></ul></nav><fieldset class="os-filter"><legend>Afficher les instructions pour</legend><div class="os-options"><label><input checked name="systeme" type="radio" value="all"><span>Tous les syst&egrave;mes</span></label><label><input name="systeme" type="radio" value="win"><span>Windows</span></label><label><input name="systeme" type="radio" value="mac"><span>macOS</span></label><label><input name="systeme" type="radio" value="linux"><span>Linux</span></label></div></fieldset><p><strong>Ce qui prot&egrave;ge vos acc&egrave;s&nbsp;:</strong></p><ul>
+<li>Un mot de passe fort et unique (ou une phrase secr&egrave;te)</li>
+<li>Une authentification biom&eacute;trique, en option (empreinte digitale, reconnaissance faciale)</li>
+<li>L&rsquo;authentification &agrave; deux facteurs (2FA) pour une protection suppl&eacute;mentaire</li>
+<li>Les cl&eacute;s d&rsquo;acc&egrave;s (passkeys), qui remplacent peu &agrave; peu les mots de passe</li>
+</ul><h2 id="l-entropie-des-mots-de-passe-pourquoi-le-hasard-compte">L&rsquo;entropie des mots de passe (pourquoi le hasard compte)</h2><p>En s&eacute;curit&eacute;, l&rsquo;entropie mesure &agrave; quel point un mot de passe est impr&eacute;visible, autrement dit le nombre de tentatives qu&rsquo;un attaquant devrait effectuer pour le deviner.</p><ul>
+<li><strong>Faible entropie&nbsp;:</strong> peu de possibilit&eacute;s, facile &agrave; deviner. Exemple&nbsp;: <code>Password123</code> semble complexe, mais suit un sch&eacute;ma tr&egrave;s courant.</li>
+<li><strong>Haute entropie&nbsp;:</strong> &eacute;norm&eacute;ment de possibilit&eacute;s, tr&egrave;s difficile &agrave; deviner. Exemple&nbsp;: <code>n9!X4uVq%3pL7#dA</code> est long, al&eacute;atoire et impr&eacute;visible.</li>
+</ul><p><strong>Comment augmenter l&rsquo;entropie&nbsp;:</strong></p><ul>
+<li><strong>Allongez le mot de passe&nbsp;:</strong> chaque caract&egrave;re suppl&eacute;mentaire multiplie le nombre de combinaisons &agrave; essayer (16&nbsp;caract&egrave;res minimum).</li>
+<li><strong>M&eacute;langez les types de caract&egrave;res&nbsp;:</strong> majuscules, minuscules, chiffres et symboles.</li>
+<li><strong>Rendez-le al&eacute;atoire&nbsp;:</strong> &eacute;vitez les mots du dictionnaire, les dates de naissance et les suites logiques (<code>123456</code>, <code>azerty</code>).</li>
+</ul><p>En r&eacute;sum&eacute;, ce sont les mots de passe enti&egrave;rement al&eacute;atoires qui offrent la meilleure entropie&nbsp;: laissez votre gestionnaire de mots de passe les g&eacute;n&eacute;rer pour vous. Pour les rares mots de passe que vous devez retenir (session de l&rsquo;ordinateur, gestionnaire de mots de passe), une phrase secr&egrave;te d&rsquo;au moins 6&nbsp;mots tir&eacute;s au hasard (m&eacute;thode Diceware&nbsp;: des d&eacute;s et une liste de 7 776&nbsp;mots) est une excellente alternative, beaucoup plus facile &agrave; m&eacute;moriser. Elle offre plus de 200 000&nbsp;milliards de milliards de combinaisons.</p><blockquote class="callout important"><div class="callout-label">Pourquoi c&rsquo;est important</div>
+<p>Quand une base de mots de passe mal prot&eacute;g&eacute;e est vol&eacute;e, les pirates peuvent tester des centaines de milliards de combinaisons par seconde sur leurs propres machines. &Agrave; ce rythme, un mot de passe de 8&nbsp;lettres minuscules est trouv&eacute; en quelques secondes, alors qu&rsquo;un mot de passe al&eacute;atoire de 16&nbsp;caract&egrave;res demanderait des milliers de milliards d&rsquo;ann&eacute;es.</p>
+</blockquote><h2 id="pourquoi-votre-mot-de-passe-doit-etre-unique-pour-chaque-compte">Pourquoi votre mot de passe doit &ecirc;tre unique pour chaque compte</h2><p>Si vous utilisez le m&ecirc;me mot de passe sur plusieurs comptes et qu&rsquo;un site est pirat&eacute;, les attaquants r&eacute;cup&egrave;rent ce mot de passe et l&rsquo;essaient sur vos autres comptes&nbsp;: c&rsquo;est ce qu&rsquo;on appelle le &laquo;&nbsp;credential stuffing&nbsp;&raquo; (bourrage d&rsquo;identifiants).</p><blockquote class="callout example"><div class="callout-label">Exemple</div>
+
+<ol>
+<li>Le mot de passe de votre messagerie est <code>Coffee2024!</code>.</li>
+<li>Vous utilisez ce m&ecirc;me mot de passe sur une boutique en ligne, qui se fait pirater&nbsp;: votre mot de passe est vol&eacute;.</li>
+<li>Les pirates l&rsquo;essaient sur votre messagerie, vos r&eacute;seaux sociaux et votre banque&hellip; et ils y parviennent.</li>
+</ol>
+
+</blockquote><blockquote class="callout solution"><div class="callout-label">Solution</div><p>Utilisez un mot de passe diff&eacute;rent pour chaque compte. Ainsi, si l&rsquo;un d&rsquo;eux est vol&eacute;, vos autres comptes restent prot&eacute;g&eacute;s.</p></blockquote><h2 id="comment-gerer-vos-mots-de-passe-et-vos-comptes">Comment g&eacute;rer vos mots de passe et vos comptes</h2><ul>
+<li>Utilisez un gestionnaire de mots de passe gratuit&nbsp;: <strong>Bitwarden</strong> (le plus simple, synchronis&eacute; entre ordinateur et t&eacute;l&eacute;phone) ou <strong>KeePassXC</strong> (les mots de passe restent uniquement sur votre ordinateur&nbsp;: copiez r&eacute;guli&egrave;rement son fichier, qui est chiffr&eacute;, sur une cl&eacute; USB ou dans le cloud). Il retient et g&eacute;n&egrave;re pour vous des mots de passe complexes.</li>
+<li>Prot&eacute;gez ce gestionnaire par une phrase secr&egrave;te solide, que vous apprenez par c&oelig;ur&nbsp;: ce sera le seul mot de passe &agrave; retenir.</li>
+<li>Profitez-en pour faire la liste de vos comptes en ligne et supprimez ceux que vous n&rsquo;utilisez plus.</li>
+<li>Configurez le verrouillage automatique de votre appareil apr&egrave;s 5&nbsp;&agrave; 10&nbsp;minutes d&rsquo;inactivit&eacute;, pour qu&rsquo;un ordinateur laiss&eacute; sans surveillance ne reste pas ouvert.</li>
+<li>Ne r&eacute;utilisez jamais un mot de passe sur plusieurs comptes.</li>
+<li>Activez la 2FA en priorit&eacute; sur votre messagerie, votre banque et votre gestionnaire de mots de passe&nbsp;: la connexion exige alors votre mot de passe <strong>et</strong> un code temporaire, re&ccedil;u par SMS ou, de pr&eacute;f&eacute;rence, g&eacute;n&eacute;r&eacute; par une application gratuite (Ente Auth, 2FAS&hellip;). Un SMS peut en effet &ecirc;tre d&eacute;tourn&eacute; si un escroc obtient un duplicata de votre carte SIM.</li>
+<li>Rangez les codes de secours fournis lors de l&rsquo;activation de la 2FA dans votre gestionnaire de mots de passe&nbsp;: ils vous permettront de r&eacute;cup&eacute;rer vos comptes si vous perdez votre t&eacute;l&eacute;phone.</li>
+<li>V&eacute;rifiez de temps en temps si votre adresse e-mail appara&icirc;t dans une fuite de donn&eacute;es connue (haveibeenpwned.com, gratuit). Si c&rsquo;est le cas, changez les mots de passe concern&eacute;s.</li>
+<li>Sur un ordinateur familial, cr&eacute;ez un compte par personne, chacun avec son propre mot de passe&nbsp;: chacun garde ses fichiers et ses comptes &agrave; l&rsquo;abri des erreurs des autres.</li>
+<li>Ne communiquez jamais votre mot de passe &agrave; qui que ce soit&nbsp;: aucun service l&eacute;gitime ne vous le demandera.</li>
+</ul><h2 id="le-kit-de-secours">Le kit de secours</h2><p>Quelques informations ne peuvent pas &ecirc;tre rang&eacute;es dans le gestionnaire de mots de passe, puisqu&rsquo;elles servent justement &agrave; y acc&eacute;der ou &agrave; d&eacute;bloquer l&rsquo;ordinateur. Notez-les sur une feuille rang&eacute;e chez vous en lieu s&ucirc;r, jamais pr&egrave;s de l&rsquo;ordinateur ni sur un post-it&nbsp;:</p><ul>
+<li>la phrase secr&egrave;te du gestionnaire de mots de passe&nbsp;;</li>
+<li>le code de r&eacute;cup&eacute;ration 2FA du gestionnaire&nbsp;;</li>
+<li>la cl&eacute; de r&eacute;cup&eacute;ration du chiffrement du disque (sous Linux, sa phrase de chiffrement).</li>
+</ul><p>Pourquoi ces trois-l&agrave; seulement&nbsp;? Une feuille de papier ne se verrouille pas&nbsp;: quiconque la trouve peut la lire. Vos autres mots de passe restent donc dans le gestionnaire, qui les chiffre. Mais pour ces trois secrets, qui ouvrent tout le reste, le risque de les oublier et de perdre d&eacute;finitivement l&rsquo;acc&egrave;s &agrave; vos donn&eacute;es est bien plus &eacute;lev&eacute; que celui qu&rsquo;un cambrioleur trouve la feuille et sache s&rsquo;en servir.</p><h2 id="les-cles-d-acces-passkeys-l-avenir-des-mots-de-passe">Les cl&eacute;s d&rsquo;acc&egrave;s (passkeys)&nbsp;: l&rsquo;avenir des mots de passe</h2><p>De plus en plus de services (Google, Apple, Microsoft, Amazon&hellip;) proposent de remplacer le mot de passe par une cl&eacute; d&rsquo;acc&egrave;s (<em>passkey</em>). Vous vous connectez alors avec l&rsquo;empreinte, la reconnaissance faciale ou le code de d&eacute;verrouillage de votre appareil, sans rien taper.</p><ul>
+<li><strong>Plus pratique&nbsp;:</strong> il n&rsquo;y a rien &agrave; retenir ni &agrave; saisir.</li>
+<li><strong>Plus s&ucirc;r&nbsp;:</strong> la cl&eacute; d&rsquo;acc&egrave;s ne fonctionne que sur le vrai site. Un faux site d&rsquo;hame&ccedil;onnage ne peut pas la r&eacute;cup&eacute;rer, m&ecirc;me si vous vous laissez tromper&nbsp;: c&rsquo;est aujourd&rsquo;hui la meilleure protection contre le phishing.</li>
+<li>Quand un service vous le propose, acceptez de cr&eacute;er une cl&eacute; d&rsquo;acc&egrave;s. Elle est enregistr&eacute;e dans votre gestionnaire de mots de passe (Bitwarden les g&egrave;re gratuitement) ou dans celui de votre appareil (Apple, Google, Windows).</li>
+<li>Gardez une autre m&eacute;thode de connexion (mot de passe avec 2FA, codes de secours) tant que vous n&rsquo;&ecirc;tes pas s&ucirc;r de retrouver vos cl&eacute;s d&rsquo;acc&egrave;s sur un nouvel appareil.</li>
+</ul><div class="card win" data-os="win"><h2 class="card-title">S&eacute;curiser votre session Windows</h2><div class="card-body" id="encadre-1"><ul>
+<li>Utilisez un mot de passe ou une phrase secr&egrave;te robuste</li>
+<li>Activez Windows Hello (code PIN, empreinte ou reconnaissance faciale selon votre PC) dans <strong class="path">Param&egrave;tres<span class="sep">&rsaquo;</span><wbr>Comptes<span class="sep">&rsaquo;</span><wbr>Options de connexion</strong>. Le code PIN Windows Hello ne fonctionne que sur ce PC&nbsp;: m&ecirc;me d&eacute;couvert, il ne donne pas acc&egrave;s &agrave; votre compte Microsoft ailleurs.</li>
+<li>Votre compte, cr&eacute;&eacute; &agrave; l&rsquo;installation, est administrateur. Pour passer &agrave; un compte standard sans d&eacute;placer vos fichiers&nbsp;: dans <strong class="path">Param&egrave;tres<span class="sep">&rsaquo;</span><wbr>Comptes<span class="sep">&rsaquo;</span><wbr>Autres utilisateurs</strong>, ajoutez un second compte et donnez-lui le type &laquo;&nbsp;Administrateur&nbsp;&raquo;. Si Windows vous demande une adresse e-mail, choisissez &laquo;&nbsp;Je ne dispose pas des informations de connexion de cette personne&nbsp;&raquo;, puis &laquo;&nbsp;Ajouter un utilisateur sans compte Microsoft&nbsp;&raquo;. Connectez-vous-y une fois, puis passez votre compte habituel en &laquo;&nbsp;Utilisateur standard&nbsp;&raquo;. Pour installer un logiciel, Windows vous demandera simplement le mot de passe administrateur, sans changer de session&nbsp;: rangez-le dans votre gestionnaire de mots de passe.</li>
+<li>R&eacute;glez un d&eacute;lai court de mise en veille et de verrouillage de l&rsquo;&eacute;cran</li>
+</ul></div></div><div class="card mac" data-os="mac"><h2 class="card-title">S&eacute;curiser votre session macOS</h2><div class="card-body" id="encadre-2"><ul>
+<li>Utilisez une phrase secr&egrave;te robuste</li>
+<li>Activez Touch ID ou le d&eacute;verrouillage avec l&rsquo;Apple Watch</li>
+<li>Votre compte, cr&eacute;&eacute; &agrave; la configuration du Mac, est administrateur. Pour passer &agrave; un compte standard sans d&eacute;placer vos fichiers&nbsp;: dans <strong class="path">R&eacute;glages Syst&egrave;me<span class="sep">&rsaquo;</span><wbr>Utilisateurs et groupes</strong>, ajoutez un second compte de type &laquo;&nbsp;Administrateur&nbsp;&raquo;. Connectez-vous-y une fois, puis retirez &agrave; votre compte habituel l&rsquo;autorisation d&rsquo;administrer l&rsquo;ordinateur. Pour installer un logiciel, macOS vous demandera simplement le nom et le mot de passe administrateur&nbsp;: rangez-les dans votre gestionnaire de mots de passe.</li>
+<li>Exigez le mot de passe d&egrave;s la mise en veille de l&rsquo;&eacute;cran dans <strong class="path">R&eacute;glages Syst&egrave;me<span class="sep">&rsaquo;</span><wbr>&Eacute;cran verrouill&eacute;</strong></li>
+</ul></div></div></article>
+<aside class="page-end" aria-label="À propos de cette page">
+  <p><a href="mailto:mateo.casanova.cyber@gmail.com?subject=Guide%20%C2%AB%20S%C3%A9curiser%20votre%20ordinateur%20personnel%20%C2%BB%2C%202.3%20Mots%20de%20passe%20et%20acc%C3%A8s&amp;body=Page%20%3A%20https%3A//casanova-mateo.github.io/securiser-votre-ordinateur/guide/mots-de-passe/%0A%0ACorrection%20propos%C3%A9e%20%3A%20">Signaler une erreur sur cette page</a></p>
+  <p><a href="../../securiser-votre-ordinateur-personnel.pdf">Le guide complet en PDF (27&nbsp;pages)</a>
+    · <a href="../../#fiches">Les fiches à imprimer</a></p>
+</aside>
+<nav class="pager" aria-label="Pages précédente et suivante"><a class="prev" href="../../guide/antivirus/" rel="prev"><span class="dir">Précédent</span><span class="n">2.2</span> Antivirus</a><a class="next" href="../../guide/chiffrement/" rel="next"><span class="dir">Suivant</span><span class="n">2.4</span> Chiffrement du disque</a></nav>
+</main>
+<nav class="sidebar" aria-label="Sommaire du guide">
+  <p class="sidebar-title"><a href="../../guide/">Sommaire</a></p>
+  <ol class="nav">
+    <li><a href="../../guide/pourquoi-securiser/"><span class="n">01</span><span>Pourquoi sécuriser votre ordinateur ?</span></a></li>
+    <li><span class="nav-group"><span class="n">02</span><span>Les bases</span></span><ol><li><a href="../../guide/mises-a-jour/"><span class="n">2.1</span><span>Mises à jour</span></a></li><li><a href="../../guide/antivirus/"><span class="n">2.2</span><span>Antivirus</span></a></li><li><a href="../../guide/mots-de-passe/" aria-current="page"><span class="n">2.3</span><span>Mots de passe et accès</span></a></li><li><a href="../../guide/chiffrement/"><span class="n">2.4</span><span>Chiffrement du disque</span></a></li><li><a href="../../guide/comptes-en-ligne/"><span class="n">2.5</span><span>Comptes en ligne</span></a></li><li><a href="../../guide/navigation/"><span class="n">2.6</span><span>Navigation sur le web</span></a></li><li><a href="../../guide/reseau/"><span class="n">2.7</span><span>Réseau et Wi-Fi</span></a></li><li><a href="../../guide/sauvegardes/"><span class="n">2.8</span><span>Sauvegardes</span></a></li><li><a href="../../guide/smartphone/"><span class="n">2.9</span><span>Smartphone</span></a></li></ol></li>
+    <li><a href="../../guide/linux/"><span class="n">03</span><span>Linux, une alternative gratuite et sûre</span></a></li>
+    <li><a href="../../guide/bonnes-pratiques/"><span class="n">04</span><span>Bonnes pratiques au quotidien</span></a></li>
+    <li><a href="../../guide/en-cas-de-probleme/"><span class="n">05</span><span>Que faire en cas de problème ?</span></a></li>
+    <li><a href="../../guide/liste-de-verification/"><span class="n">06</span><span>Liste de vérification</span></a></li>
+    <li><a href="../../guide/annexe-anssi/"><span class="n">07</span><span>Annexe : les 42 mesures de l’ANSSI</span></a></li>
+  </ol>
+</nav>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap wide">
+    <p><strong>Matéo CASANOVA</strong> — Sécuriser votre ordinateur personnel, version 1.0 (version originale en français), octobre 2026.</p>
+    <p>Une erreur, une suggestion ? Écrivez à
+      <a href="mailto:mateo.casanova.cyber@gmail.com?subject=Guide%20%C2%AB%20S%C3%A9curiser%20votre%20ordinateur%20personnel%20%C2%BB">mateo.casanova.cyber@gmail.com</a>.</p>
+    <p class="links"><a href="https://github.com/casanova-mateo/securiser-votre-ordinateur">Sources et historique des versions</a></p>
+    <p>Ce guide est un travail personnel, indépendant de l’ANSSI et de Cybermalveillance.gouv.fr. Il est fourni à titre informatif ; les intitulés des menus peuvent varier selon la version et la langue de votre système d’exploitation.</p>
+    <p>Ce site n’utilise ni cookie ni outil de mesure d’audience : le système choisi et les cases cochées restent dans votre navigateur. Éditeur : Matéo CASANOVA, mateo.casanova.cyber@gmail.com. Hébergeur : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+  </div>
+</footer>
+
+</body>
+</html>

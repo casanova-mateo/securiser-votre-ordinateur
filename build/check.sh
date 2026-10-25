@@ -10,5 +10,5 @@ setup_python "$DIR/requirements.txt" "$DIR/requirements-dev.txt"
 cd "$DIR"
 "$VENV/bin/shellcheck" -x build.sh check.sh env.sh
 echo "shellcheck : aucun problème"
-PYTHONPATH="$DIR" "$PY" -m pylint build_pdf.py build_fiches.py tests/*.py
+PYTHONPATH="$DIR" "$PY" -m pylint build_pdf.py build_fiches.py build_site.py tests/*.py
 PYTHONPATH="$DIR" "$PY" -m pytest tests "$@"

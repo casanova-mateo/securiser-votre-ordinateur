@@ -6,6 +6,8 @@ Guide pratique gratuit pour protéger vos données sous Windows, macOS et Linux,
 
 Par Matéo CASANOVA · Version 1.0 (version originale en français) · Octobre 2026
 
+Le guide se lit en ligne, page par page : <https://casanova-mateo.github.io/securiser-votre-ordinateur/guide/>
+
 ## Télécharger
 
 | Document | Contenu |
@@ -33,8 +35,9 @@ Ce guide est un travail personnel, indépendant de l'ANSSI et de Cybermalveillan
 |---|---|
 | `securiser-votre-ordinateur-personnel.md` | Texte source du guide |
 | `fiches/fiche-urgence.md` | Texte source de la fiche 3 (les fiches 1 et 2 sont extraites du guide) |
-| `build/` | Génération des PDF à partir du Markdown : voir [build/README.md](build/README.md) |
-| `index.html`, `favicon.svg`, `apple-touch-icon.png`, `og-image.png` | Site publié par GitHub Pages |
+| `build/` | Génération des PDF et du site à partir du Markdown : voir [build/README.md](build/README.md) |
+| `index.html`, `404.html`, `sitemap.xml`, `guide/` | Site publié par GitHub Pages, généré à partir du Markdown (ne pas modifier à la main) |
+| `site.css`, `site.js`, `favicon.svg`, `apple-touch-icon.png`, `og-image.png` | Mise en page, interactions et images du site, écrites à la main |
 
 ## Historique des versions
 
